@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Environment variables (SECURITY!)
+.env
+*.local
+
+# Debug logs
+*.log
