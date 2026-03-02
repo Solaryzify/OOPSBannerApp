@@ -1,17 +1,54 @@
 public class OOPSBannerApp {
-    public static void main(String[] args) {
+    
+    public static String getLineO(int row) {
         String[] lines = {
-            String.join(" ", "   ***   ", "   ***   ", "*********", "  *****  "),
-            String.join(" ", " **   ** ", " **   ** ", "**      *", " **      "),
-            String.join(" ", "**     **", "**     **", "**      *", "**       "),
-            String.join(" ", "**     **", "**     **", "*********", " *****   "),
-            String.join(" ", "**     **", "**     **", "**       ", "     **  "),
-            String.join(" ", " **   ** ", " **   ** ", "**       ", "**    ** "),
-            String.join(" ", "   ***   ", "   ***   ", "**       ", " *****   "),
+           "   ***    ", 	
+     	   " **   **  ",	
+       	   "**     ** ",	
+           "**     ** ", 	
+      	   "**     ** ",	
+       	   " **   **  ", 	
+     	   "   ***    ", 	
         };
-        for (String line : lines) {
+        return lines[row];
+    }
+    
+    public static String getLineP(int row) {
+        String[] lines = {
+            "********* ",
+            "**      * ",
+            "**      * ",
+            "********* ",
+            "**        ",
+            "**        ",
+            "**        "
+        };
+        return lines[row];
+    }
+    
+    public static String getLineS(int row) {
+        String[] lines = {
+            "  *****  ",
+            " **      ",
+            "**       ",
+            " *****   ",
+            "     **  ",
+            "**    ** ",
+            " *****   "
+        };
+        return lines[row];
+    }
+    
+    public static void main(String[] args) {
+        String[] bannerLines = new String[7];
+        
+        for (int i = 0; i < 7; i++) {
+            bannerLines[i] = String.join("", 
+                getLineO(i), getLineO(i), getLineP(i), getLineS(i));
+        }
+        
+        for (String line : bannerLines) {
             System.out.println(line);
         }
     }
 }
-    
